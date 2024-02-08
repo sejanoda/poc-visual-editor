@@ -1,0 +1,7 @@
+query GET_MODELS {
+  modelExamples {
+    title
+    article
+    id
+  }
+}
