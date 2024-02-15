@@ -6,7 +6,15 @@ import { useEffect } from "react";
 
 export default function ContentList() {
 
-    const { isEditionMode, setEditonMode, publishDraftContent, deployContent, changes, handleContentChanges, draftChanges } = useEditor()
+    const {
+        isEditionMode,
+        setEditonMode,
+        publishDraftContent,
+        deployContent,
+        changes,
+        handleContentChanges,
+        draftChanges
+    } = useEditor()
 
     const {
         data: contentList,

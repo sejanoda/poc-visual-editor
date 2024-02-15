@@ -22,11 +22,11 @@ export default function EditorProvider({
     const [deployModel] = useMutation(DEPLOY_MODEL)
 
     async function publishDraftContent() {
-        setDraftChanges(changes)
+        setDraftChanges(prevDraftChanges => [...prevDraftChanges, ...changes])
         changes.forEach(async (change: any) => {
             await publishDraftModel({
                 variables: {
-                    id: change.modelId,
+                    id: change.id,
                     title: change.title,
                     article: change.article
                 }
@@ -39,7 +39,7 @@ export default function EditorProvider({
         draftChanges.forEach(async (change: any) => {
             await deployModel({
                 variables: {
-                    id: change.modelId,
+                    id: change.id,
                 }
             })
         })
