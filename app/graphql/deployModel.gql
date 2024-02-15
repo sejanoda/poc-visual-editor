@@ -1,0 +1,7 @@
+mutation DEPLOY_MODEL($id: ID){
+  publishModelExample(to:PUBLISHED, where:{id:$id}) {
+    id
+    title
+    article
+  }
+}

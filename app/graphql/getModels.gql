@@ -1,0 +1,7 @@
+query GET_MODELS($stage: Stage!) {
+  modelExamples(stage: $stage) {
+    title
+    article
+    id
+  }
+}

@@ -1,0 +1,7 @@
+mutation PUBLISH_DRAFT_MODEL($id: ID, $title:String, $article:String){
+ 	updateModelExample(data:{title:$title, article:$article}, where:{id:$id}){
+    id
+    title
+    article
+  }
+}
