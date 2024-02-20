@@ -1,15 +1,15 @@
 
 import ContentList from "./components/ContentList";
 import ApolloWrapper from "./context/ApolloWrapper";
-import EditorProvider from "./context/EditorProvider";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="w-full mx-auto p-4 max-w-7xl">
       <ApolloWrapper>
-        <EditorProvider>
+        <main className="flex flex-col gap-4">
+          <h1 className="w-full px-4 text-center text-[2rem] font-bold">POC Visual Editor</h1>
           <ContentList />
-        </EditorProvider>
+        </main>
       </ApolloWrapper>
     </main>
   );
